@@ -1,24 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sXO-vR-wVG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--My Decks-->
+        <scene sceneID="tmc-Iw-e9F">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="1CW-fA-Zyc" customClass="Deck_View" customModule="Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ipb-us-XRX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UHk-by-1ad">
+                            <rect key="frame" x="0.0" y="99.5" width="414" height="106"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Create Deck"/>
+                            <connections>
+                                <action selector="createADeckSegue:" destination="1CW-fA-Zyc" eventType="touchUpInside" id="Fiv-lt-1hB"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deck" id="IbH-f3-oB6">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IbH-f3-oB6" id="3Xa-Eq-zh5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1CW-fA-Zyc" id="7AY-0p-TXS"/>
+                            <outlet property="delegate" destination="1CW-fA-Zyc" id="RXu-Nb-VWV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Decks" id="GwE-qA-tBw"/>
+                    <connections>
+                        <segue destination="dGX-FP-arf" kind="show" identifier="moveToDeckPageView" id="2aN-EP-iBY"/>
+                        <segue destination="Raz-n2-n6n" kind="show" identifier="editDeckSegue" id="mGA-b8-Jsz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HaG-Wl-Dd4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.579710144927539" y="-160.04464285714286"/>
+        </scene>
+        <!--Deck Creator-->
+        <scene sceneID="Crs-Q0-KKJ">
+            <objects>
+                <tableViewController id="Raz-n2-n6n" customClass="Deck_Creator" customModule="Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rpc-J4-E9e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CzF-eM-AwN">
+                            <rect key="frame" x="0.0" y="100.5" width="414" height="98"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Add Card"/>
+                            <connections>
+                                <action selector="AddaCardbutton:" destination="Raz-n2-n6n" eventType="touchUpInside" id="WmM-Be-5LT"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="card" id="Xhk-70-PhD" customClass="CardView" customModule="Flash_Cards" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xhk-70-PhD" id="Czi-Oh-7u1">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="front" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJn-c4-YTK" userLabel="front">
+                                            <rect key="frame" x="42" y="4" width="109" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="109" id="4oE-6A-FQs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="back" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dR9-62-1dr" userLabel="back">
+                                            <rect key="frame" x="226" y="5" width="109" height="34.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="109" id="Ebq-So-fLe"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NJn-c4-YTK" firstAttribute="top" secondItem="Czi-Oh-7u1" secondAttribute="top" constant="4" id="7ye-d8-zbW"/>
+                                        <constraint firstAttribute="bottom" secondItem="dR9-62-1dr" secondAttribute="bottom" constant="5" id="82N-8q-mGL"/>
+                                        <constraint firstItem="dR9-62-1dr" firstAttribute="top" secondItem="Czi-Oh-7u1" secondAttribute="top" constant="5" id="CaF-Bg-7D8"/>
+                                        <constraint firstAttribute="bottom" secondItem="NJn-c4-YTK" secondAttribute="bottom" constant="5.5" id="Hnr-Lf-hyv"/>
+                                        <constraint firstAttribute="trailing" secondItem="dR9-62-1dr" secondAttribute="trailing" constant="79" id="L9A-SK-whz"/>
+                                        <constraint firstItem="NJn-c4-YTK" firstAttribute="leading" secondItem="Czi-Oh-7u1" secondAttribute="leading" constant="42" id="kcI-c6-Wwd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="back" destination="dR9-62-1dr" id="OLm-gz-IiO"/>
+                                    <outlet property="front" destination="NJn-c4-YTK" id="qNE-zu-X19"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Raz-n2-n6n" id="g4A-NH-NdU"/>
+                            <outlet property="delegate" destination="Raz-n2-n6n" id="MHd-J7-FXe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="nn7-M4-tAm">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="cNd-D8-Ntt">
+                            <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="cancelCreateDeck:" destination="Raz-n2-n6n" id="hlv-ga-yPa"/>
+                            </connections>
+                        </barButtonItem>
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Untitled Deck" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" id="CMV-2w-JWG">
+                            <rect key="frame" x="159" y="12.5" width="96" height="19"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="yPZ-dk-wo7">
+                            <connections>
+                                <action selector="finsishCreatingCards:" destination="Raz-n2-n6n" id="5Wf-1z-W8Z"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="deckName" destination="CMV-2w-JWG" id="zIY-Dg-BHB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k62-tg-eYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="-160.04464285714286"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="p71-28-LoG">
+            <objects>
+                <navigationController id="sXO-vR-wVG" customClass="navigationViewController" customModule="Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2jD-e7-kdY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1CW-fA-Zyc" kind="relationship" relationship="rootViewController" id="F9P-Le-DaO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lT5-3a-woc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-817" y="-160"/>
+        </scene>
+        <!--View Deck Flash Cards-->
+        <scene sceneID="L0u-VT-U89">
+            <objects>
+                <viewController id="dGX-FP-arf" customClass="viewDeckFlashCards" customModule="Flash_Cards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xsp-lu-oCr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YC-OW-W3Q">
+                                <rect key="frame" x="0.0" y="88" width="414" height="701"/>
+                                <gestureRecognizers/>
+                                <state key="normal">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="flip:" destination="dGX-FP-arf" eventType="touchUpInside" id="khK-Qo-iLR"/>
+                                    <outletCollection property="gestureRecognizers" destination="f34-h2-5i6" appends="YES" id="2O5-Rh-cvo"/>
+                                    <outletCollection property="gestureRecognizers" destination="xBu-B6-Z3V" appends="YES" id="8wK-rJ-CDk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtg-IG-83d">
+                                <rect key="frame" x="20" y="676.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="11" translatesAutoresizingMaskIntoConstraints="NO" id="5F0-SH-bQz">
+                                <rect key="frame" x="117.5" y="825" width="179" height="37"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="slide:" destination="dGX-FP-arf" eventType="valueChanged" id="i8O-Lr-SDl"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5F0-SH-bQz" firstAttribute="top" secondItem="0YC-OW-W3Q" secondAttribute="bottom" constant="36" id="0hA-VM-ofL"/>
+                            <constraint firstItem="98S-cm-KW1" firstAttribute="trailing" secondItem="mtg-IG-83d" secondAttribute="trailing" constant="20" id="4ex-jC-de6"/>
+                            <constraint firstItem="5F0-SH-bQz" firstAttribute="bottom" secondItem="98S-cm-KW1" secondAttribute="bottom" id="63n-IW-Dja"/>
+                            <constraint firstItem="98S-cm-KW1" firstAttribute="trailing" secondItem="5F0-SH-bQz" secondAttribute="trailing" constant="117.5" id="Hzn-Ds-XyR"/>
+                            <constraint firstItem="0YC-OW-W3Q" firstAttribute="top" secondItem="98S-cm-KW1" secondAttribute="top" id="WQc-lh-u1D"/>
+                            <constraint firstItem="0YC-OW-W3Q" firstAttribute="trailing" secondItem="98S-cm-KW1" secondAttribute="trailing" id="WxV-Fd-E2k"/>
+                            <constraint firstItem="0YC-OW-W3Q" firstAttribute="leading" secondItem="98S-cm-KW1" secondAttribute="leading" id="Yjw-AZ-Zlf"/>
+                            <constraint firstItem="5F0-SH-bQz" firstAttribute="leading" secondItem="98S-cm-KW1" secondAttribute="leading" constant="117.5" id="oLH-HN-Gek"/>
+                            <constraint firstItem="mtg-IG-83d" firstAttribute="leading" secondItem="98S-cm-KW1" secondAttribute="leading" constant="20" id="vDS-aQ-iTF"/>
+                            <constraint firstItem="5F0-SH-bQz" firstAttribute="top" secondItem="mtg-IG-83d" secondAttribute="bottom" constant="128" id="yE8-Q9-0y6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="98S-cm-KW1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hQy-P7-xs7"/>
+                    <connections>
+                        <outlet property="cardText" destination="mtg-IG-83d" id="7eg-ZG-WzR"/>
+                        <outlet property="flipCardButton" destination="0YC-OW-W3Q" id="XU9-WU-ZhY"/>
+                        <outlet property="pageController" destination="5F0-SH-bQz" id="j3G-B7-Enc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbW-OB-UeH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="f34-h2-5i6">
+                    <connections>
+                        <action selector="swipeRight:" destination="dGX-FP-arf" id="QbW-HV-9RS"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="xBu-B6-Z3V">
+                    <connections>
+                        <action selector="swipeLeft:" destination="dGX-FP-arf" id="YL0-ZT-UTD"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="945" y="567"/>
         </scene>
     </scenes>
 </document>

@@ -3,29 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		27131FBB2454DD250020C82E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27131FBA2454DD250020C82E /* AppDelegate.swift */; };
 		27131FBD2454DD250020C82E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27131FBC2454DD250020C82E /* SceneDelegate.swift */; };
-		27131FBF2454DD250020C82E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27131FBE2454DD250020C82E /* ViewController.swift */; };
 		27131FC22454DD250020C82E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27131FC02454DD250020C82E /* Main.storyboard */; };
 		27131FC52454DD250020C82E /* Flash_Cards.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27131FC32454DD250020C82E /* Flash_Cards.xcdatamodeld */; };
 		27131FC72454DD260020C82E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27131FC62454DD260020C82E /* Assets.xcassets */; };
-		27131FCA2454DD260020C82E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27131FC82454DD260020C82E /* LaunchScreen.storyboard */; };
+		2772DB96246781E200D21C12 /* viewDeckFlashCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2772DB95246781E200D21C12 /* viewDeckFlashCards.swift */; };
+		27B0C2992458F66500DD0472 /* Deck View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B0C2982458F66500DD0472 /* Deck View.swift */; };
+		27B0C29B2458F78A00DD0472 /* Deck Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B0C29A2458F78A00DD0472 /* Deck Creator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		27131FB72454DD250020C82E /* Flash Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flash Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27131FBA2454DD250020C82E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27131FBC2454DD250020C82E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27131FBE2454DD250020C82E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27131FC12454DD250020C82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27131FC42454DD250020C82E /* Flash_Cards.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flash_Cards.xcdatamodel; sourceTree = "<group>"; };
 		27131FC62454DD260020C82E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		27131FC92454DD260020C82E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27131FCB2454DD260020C82E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2772DB95246781E200D21C12 /* viewDeckFlashCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewDeckFlashCards.swift; sourceTree = "<group>"; };
+		27B0C2982458F66500DD0472 /* Deck View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck View.swift"; sourceTree = "<group>"; };
+		27B0C29A2458F78A00DD0472 /* Deck Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck Creator.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +62,11 @@
 			children = (
 				27131FBA2454DD250020C82E /* AppDelegate.swift */,
 				27131FBC2454DD250020C82E /* SceneDelegate.swift */,
-				27131FBE2454DD250020C82E /* ViewController.swift */,
+				2772DB95246781E200D21C12 /* viewDeckFlashCards.swift */,
 				27131FC02454DD250020C82E /* Main.storyboard */,
+				27B0C29A2458F78A00DD0472 /* Deck Creator.swift */,
+				27B0C2982458F66500DD0472 /* Deck View.swift */,
 				27131FC62454DD260020C82E /* Assets.xcassets */,
-				27131FC82454DD260020C82E /* LaunchScreen.storyboard */,
 				27131FCB2454DD260020C82E /* Info.plist */,
 				27131FC32454DD250020C82E /* Flash_Cards.xcdatamodeld */,
 			);
@@ -106,7 +109,7 @@
 				};
 			};
 			buildConfigurationList = 27131FB22454DD250020C82E /* Build configuration list for PBXProject "Flash Cards" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -128,7 +131,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27131FCA2454DD260020C82E /* LaunchScreen.storyboard in Resources */,
 				27131FC72454DD260020C82E /* Assets.xcassets in Resources */,
 				27131FC22454DD250020C82E /* Main.storyboard in Resources */,
 			);
@@ -141,7 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27131FBF2454DD250020C82E /* ViewController.swift in Sources */,
+				27B0C29B2458F78A00DD0472 /* Deck Creator.swift in Sources */,
+				27B0C2992458F66500DD0472 /* Deck View.swift in Sources */,
+				2772DB96246781E200D21C12 /* viewDeckFlashCards.swift in Sources */,
 				27131FBB2454DD250020C82E /* AppDelegate.swift in Sources */,
 				27131FC52454DD250020C82E /* Flash_Cards.xcdatamodeld in Sources */,
 				27131FBD2454DD250020C82E /* SceneDelegate.swift in Sources */,
@@ -157,14 +161,6 @@
 				27131FC12454DD250020C82E /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		27131FC82454DD260020C82E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				27131FC92454DD260020C82E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,15 +284,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3BD6D8HQC;
 				INFOPLIST_FILE = "Flash Cards/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "schoolDev.Flash-Cards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -306,15 +305,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P3BD6D8HQC;
 				INFOPLIST_FILE = "Flash Cards/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "schoolDev.Flash-Cards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
