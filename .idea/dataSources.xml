@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="build 2" uuid="2c3d47dd-af3a-4aa7-9305-14dce80e0ebc">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/build/XCBuildData/build 2.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="build" uuid="6e168701-00fa-4a0c-a494-86ccfc0ee297">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/build/XCBuildData/build.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

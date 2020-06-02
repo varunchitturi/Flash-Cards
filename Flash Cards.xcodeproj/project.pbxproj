@@ -28,6 +28,7 @@
 		2772DB95246781E200D21C12 /* viewDeckFlashCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewDeckFlashCards.swift; sourceTree = "<group>"; };
 		27B0C2982458F66500DD0472 /* Deck View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck View.swift"; sourceTree = "<group>"; };
 		27B0C29A2458F78A00DD0472 /* Deck Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deck Creator.swift"; sourceTree = "<group>"; };
+		E6E7184AF464CCC7F2B1C7FC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +47,7 @@
 			children = (
 				27131FB92454DD250020C82E /* Flash Cards */,
 				27131FB82454DD250020C82E /* Products */,
+				E6E7184AF464CCC7F2B1C7FC /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
