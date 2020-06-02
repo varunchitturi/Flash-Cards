@@ -1,0 +1,14 @@
+version: "Apple Swift version 5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+options: "e570125a965bff7900b7287ea1096621"
+build_time: [1591127029, 227512000]
+inputs:
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/Flash Cards/Deck Creator.swift": [1589106247, 288837992]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/Flash Cards/Deck View.swift": [1589105458, 357218695]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/Flash Cards/viewDeckFlashCards.swift": [1589095850, 694464721]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/Flash Cards/AppDelegate.swift": [1587848613, 885066663]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/Flash Cards/SceneDelegate.swift": [1587848613, 892873801]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/build/Flash Cards.build/Debug-iphonesimulator/Flash Cards.build/DerivedSources/CoreDataGenerated/Flash_Cards/Card+CoreDataClass.swift": [1591127029, 213888828]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/build/Flash Cards.build/Debug-iphonesimulator/Flash Cards.build/DerivedSources/CoreDataGenerated/Flash_Cards/Card+CoreDataProperties.swift": [1591127029, 214784439]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/build/Flash Cards.build/Debug-iphonesimulator/Flash Cards.build/DerivedSources/CoreDataGenerated/Flash_Cards/Deck+CoreDataClass.swift": [1591127029, 212314195]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/build/Flash Cards.build/Debug-iphonesimulator/Flash Cards.build/DerivedSources/CoreDataGenerated/Flash_Cards/Deck+CoreDataProperties.swift": [1591127029, 213062164]
+  "/Users/varunchitturi/Documents/Coding/App_Development/Flash Cards/build/Flash Cards.build/Debug-iphonesimulator/Flash Cards.build/DerivedSources/CoreDataGenerated/Flash_Cards/Flash_Cards+CoreDataModel.swift": [1591127029, 210707931]
